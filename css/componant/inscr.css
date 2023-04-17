@@ -1,0 +1,26 @@
+
+.ville{
+    margin:0%;
+}
+
+.cook{
+    font-size: 500%;
+}
+
+.droit{
+    position: absolute;
+    right: 70%;
+}
+
+.form{
+    background-color: teal;
+}
+
+.btn-primary{
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 5, 5);
+}
+
+*{
+    background-color: teal;
+}

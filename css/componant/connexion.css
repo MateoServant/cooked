@@ -1,0 +1,38 @@
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+    
+.form{
+    
+    height:80%;
+    
+}
+
+.co{
+    border-radius: 0%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 5, 5);
+    padding: 0%;
+}
+
+.btn-primary{
+    padding: 0%;
+    border-bottom: 10%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #9b2525;
+    color: #d33e3e;
+    border: none;
+    cursor: pointer;
+    --bs-btn-hover-bg: #ffffff;
+    --bs-btn-active-bg: #ffffff;
+}
+@media (min-width: 1025px) {
+    .h-custom-2 {
+        height: 100%;
+    }
+}
