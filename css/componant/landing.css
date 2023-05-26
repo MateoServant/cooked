@@ -1,0 +1,36 @@
+*{
+    background-color: teal;
+}
+
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: transparent;
+ 
+}
+
+a:hover{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+
+
+@media (min-width: 992px){
+    .container {max-width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .container { max-width: 100%;
+    }
+}
+
+@media (min-width: 576px){
+    .container {
+        max-width: 100%;
+    }
+}
+

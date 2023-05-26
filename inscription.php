@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> <!-- page de dormulaire d'inscription-->
 <html lang="fr">
 <head>
@@ -95,47 +96,41 @@ $pdo = new PDO('mysql:host=localhost;dbname=cooked','root','',array(PDO::ATTR_ER
 
 
 <main>
-        <section class="vh-100">
-            <div class="container-fluid">
-              <div class="row">
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col-sm-6 text-black">
-          
-                  <div class="px-5 ms-xl-4">
-                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i> <br><br><br>
-                    <span class="h1 fw-bold mb-0" class="cook">Cook Connect</span>
-                  </div>
+                    <div class="px-5 ms-xl-4">
+                        <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i> <br><br><br>
+                        <span class="h1 fw-bold mb-0" >Cook Connect</span>
+                    </div>
                   
-                  
-
-                  
-      
-                    
-        
-              
-       <section class="form"> 
-            <form action="inscription_traitement.php" method="post">
-                <h2 class="text">Inscription</h2>       
-                <div class="form-group">
-                    <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+ 
+                    <section class="form" > 
+                            <form action="inscription_traitement.php" method="post">
+                                <h2 class="text">Inscription</h2>       
+                                <div class="form-group">
+                                    <input type="text" name="pseudo" class="form-control" maxlength="15" placeholder="Pseudo" required="required" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" minlength="7" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" minlength="7" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Inscription</button>
+                                </div>  
+                                <a href="indexe.php" class="btn btn-primary btn-block">Connection</a>
+                            </form>
+                    </section>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" minlength="7" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required"minlength="7" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Inscription</button>
-                </div> 
-                <div class="form-group">
-                    <button  class="btn btn-primary btn-block"><a class="a"href="index.php">Connexion</button>
-                </div>    
-            </form>
+            </div>
         </div>
-        </section>
+    </section>
         
     </main>
 

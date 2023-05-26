@@ -1,9 +1,225 @@
-main{
-    background-color: rgb(252, 252, 252);
-    color:rgb(0, 0, 0)
-    
+.top-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
 }
-footer{
-    background-color: rgb(255, 255, 255);
-    color: white ;
+
+.bot-post{
+    display: flex;
+    flex-direction: row
+}
+.poubelle{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(53 91 215)
+    
+  }
+
+
+.imgpost{
+    max-width: min(100%, 500px);
+    max-height: 450px;
+    border-radius: 16px;
+    display: block;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+  
+}
+
+.message-post{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    max-width: 70ch;
+    display: flex;
+    background-color: rgb(53 91 215)
+}
+.pb{
+    
+    margin-left: 85%;
+    background-color: rgb(53 91 215)
+
+}
+
+.date-post{
+    color: rgb(54, 54, 54);
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(53 91 215);
+}
+
+.tag-post{
+    margin: 0;
+    color: #00407e;
+    background-color: rgb(53 91 215)
+}
+
+.pseudo-post{
+    margin: 0;
+    font-size: 150%;
+    background-color: rgb(53 91 215)
+}
+
+.top-post1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(152 29 29);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+.top-post2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+.top-post3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+.top-post4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+.top-post5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+.top-post6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+.top-post7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+.top-post8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+.top-post9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgb(53 91 215);
+    width: 50%;
+    margin-left: 25%;
+    padding: 16px;
+    margin-bottom: 2%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0 0 0);
+}
+
+@media (max-width: 425px){
+    .top-post{
+        margin-left: 1%;
+        width: 100%;
+    }
+
+
 }

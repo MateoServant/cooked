@@ -1,16 +1,21 @@
+
 .navbar {
 
     display: flex;
     
     align-items: center;
     
-    justify-content: space-between;
+    justify-content: space-evenly;
     
     padding: 20px;
     
     background-color: teal;
     
     color: #fff;
+
+    flex-direction: column;
+
+
     
     }
     
@@ -78,7 +83,7 @@
     border-radius: 8px;
     
     top: 35px;
-    
+    right: -78px;
     }
     
 .dropdown li + li {
@@ -180,9 +185,9 @@ input[type=checkbox]:checked ~ .menu{
 .dropdown {
         
         
-        top: 30px;
+    right: -78px;
         
-        background-color: bisque;
+
 
         
         
@@ -201,12 +206,12 @@ input[type=checkbox]:checked ~ .menu{
 
 
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 425px) {
 
-    .services{
-        position: relative;
-        left: 10%;
+    .column2{
+        display: none;
     }
 
-
 }
+
+

@@ -1,0 +1,229 @@
+.containe{
+    display: flex;
+    background-color: rgb(74, 148, 245);
+  }
+
+.column{
+    background-color: rgb(74, 148, 245);
+    flex-basis: 77%;
+  }
+.column2{
+  background-color: rgb(35, 130, 255);
+  flex-basis: 33%;
+  border-width: 2px;
+  border-style: double;
+  border-color: rgb(78 82 233);
+}
+.column1{
+  background-color: rgb(35, 130, 255);
+  flex-basis: 50%;
+  border-width: 2px;
+  border-style: double;
+  border-color: rgb(78 82 233);
+}
+
+
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(3, 112, 255);
+  align-content: stretch;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+.slider button {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.tagg {
+  display: inline-block;
+  background-color: #00407e;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg1 {
+  display: inline-block;
+  background-color: rgb(152 29 29);
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg2 {
+  display: inline-block;
+  background-color: #b4660c;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg3 {
+  display: inline-block;
+  background-color: #8a900b;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg4 {
+  display: inline-block;
+  background-color: #398407;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg5 {
+  display: inline-block;
+  background-color: #62007e;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg6 {
+  display: inline-block;
+  background-color: #175d0d;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg7 {
+  display: inline-block;
+  background-color: #da2525;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg8 {
+  display: inline-block;
+  background-color: #0d42f0;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg9 {
+  display: inline-block;
+  background-color: #5416c0;
+  border-radius: 26px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 6%;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2%;
+  font-size: 75%;
+}
+.tagg span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.tagg span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.tagg:hover {
+  background-color: rgb(3, 112, 255);
+}
+.tagg:hover span {
+  padding-right: 25px;
+}
+.tagg:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.tags{ 
+display: flex;
+justify-content: center;
+background-color:rgb(3, 112, 255);
+margin: 0%;
+padding-top: 3%;
+}
+
