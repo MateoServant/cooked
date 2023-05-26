@@ -37,3 +37,4 @@ function afficherMessagesFrance() {
 function afficherMessagesPizza() {
     window.location.href = "tag.php?Pizza";
 }
+

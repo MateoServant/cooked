@@ -219,6 +219,7 @@
     border-style: solid;
     border-color: rgb(0 0 0);
 }
+
 .top-post10{
     display: flex;
     justify-content: center;
@@ -233,6 +234,8 @@
     border-width: 2px;
     border-style: solid;
     border-color: rgb(0 0 0);
+
+
 }
 
 

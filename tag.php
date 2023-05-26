@@ -134,10 +134,6 @@
                         <input type="hidden" name="recherche" value="<?php echo $recherche; ?>">
                         <button type="button" onclick="afficherMessagesEntree()" class="tagg9">Entrée</button>
                         </form>
-                        <form method="get" action="index.php" class="sup">
-                        <input type="hidden" name="recherche" value="<?php echo $recherche; ?>">
-                        <button type="button" onclick="afficherMessagesEntree()" class="tagg">RESET</button>
-                        </form>
                         </div>
                         </div>
                         </div>
@@ -552,42 +548,7 @@
 
                         
                         </div>
-                    <div class="resultats hide" id="Retour">
-                        <?php
-                        $recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
-                        $stmt = null; // Initialize the variable
-
-                        if (isset($_GET[''])) {
-                            $stmt = $pdo->prepare("SELECT * FROM poste WHERE tag LIKE :recherche AND tag LIKE '%%' ORDER BY DATE DESC");
-                            $stmt->execute(array(':recherche' => '%' . $recherche . '%'));
-                        }
-                        ?>
-
-                        <div class="resultats">
-                            <?php
-                            if ($stmt) {
-                                // Créer la mise en page du résultat
-                                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                                    <div class="top-post9">
-                                        <div class="bot-post"> 
-                                            <p class="pseudo-post"><?php echo $row['pseudo']; ?></p> 
-                                            <p class="date-post"><?php echo '('.$row['date'].')'; ?></p>
-                                        </div>
-                                        <p class="tag-post"><?php echo $row['tag']; ?></p>
-                                        <p class="message-post"><?php echo $row['message']; ?></p>
-                                        <img class="imgpost" src="img/<?php echo $row['src']; ?>">
-                                        <?php if ($row['pseudo'] === $row['pseudo']) { ?>
-                                            <div class="pb">
-                                                <a href="supprimer.php?id=<?php echo $row['id_post'] ?>">
-                                                    <img src="img/poubelle.png" alt="Icône de poubelle" class="poubelle" >  
-                                                </a>
-                                            </div>
-                                        <?php }?>
-                                    </div>
-                                <?php } // Fermeture de la boucle while
-                            } // Fermeture de la condition if
-                            ?>
-                        </div>
+                    
                         
 
                         

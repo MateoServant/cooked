@@ -68,9 +68,10 @@
                                     <p class="message-post"><?php echo $message['message']; ?></p>
                                     <img alt="image de la publication"  class="imgpost" src="img/<?php echo $message['src']; ?>">
                                     <div class="pb">
-                                        <a href="supprimer.php?id=<?php echo $message['id_post']; ?>">
-                                            <img src="img/poubelle.png" alt="Icône de poubelle" class="poubelle" >
+                                        <a href="suppopup.php?id=<?php echo $message['id_post'] ?>" class="delete-link">
+                                            <img src="img/poubelle.png" alt="Icône de poubelle" class="poubelle" />
                                         </a>
+
                                     </div>
                                 </div>
                             <?php

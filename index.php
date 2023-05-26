@@ -50,7 +50,7 @@ if (!isset($_SESSION['user'])) {
                         <li><a href="tag.php" style="text-decoration:none">catégories</a></li>
 
                         <li class="services">
-                            <a href="/" style="text-decoration:none">Services</a>
+                            <a href="landing.php" style="text-decoration:none">Services</a>
                             <!-- DROPDOWN MENU -->
                             <ul class="dropdown">
                                 <li><a href="landing.php" style="text-decoration:none">Profil</a></li>
@@ -195,10 +195,8 @@ if (!isset($_SESSION['user'])) {
                                     <input type="hidden" name="recherche" value="<?php echo $recherche; ?>">
                                     <button type="button" onclick="afficherMessagesEntree()" class="tagg9">Entrée</button>
                                     </form>
-                                    <form method="get" action="tag.php" class="sup">
-                                    <input type="hidden" name="recherche" value="<?php echo $recherche; ?>">
-                                    <button type="button" onclick="afficherMessagesEntree()" class="tagg">RESET</button>
-                                    </form>
+                                   
+                                    
                                 </div>
                                 
                                
@@ -541,47 +539,41 @@ if (!isset($_SESSION['user'])) {
                                 
                             <div class="resultats hide" id="resultatsFrance">
                                 <?php
-                                $recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
-                                $stmt = null; // Initialize the variable
+                                    $recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
+                                    $stmt = null; // Initialize the variable
 
-                                if (isset($_GET['France'])) {
-                                    $stmt = $pdo->prepare("SELECT * FROM poste WHERE tag LIKE :recherche AND tag LIKE '%France%' ORDER BY DATE DESC");
-                                    $stmt->execute(array(':recherche' => '%' . $recherche . '%'));
-                                }
-                                ?>
-
-                                <div class="resultats">
-                                    <?php
-                                    if ($stmt) {
-                                        // Créer la mise en page du résultat
-                                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                                            <div class="top-post8">
-                                                <div class="bot-post"> 
-                                                    <p class="pseudo-post"><?php echo $row['pseudo']; ?></p> 
-                                                    <p class="date-post"><?php echo '('.$row['date'].')'; ?></p>
-                                                </div>
-                                                <p class="tag-post"><?php echo $row['tag']; ?></p>
-                                                <p class="message-post"><?php echo $row['message']; ?></p>
-                                                <img class="imgpost" alt="image de la publication" src="img/<?php echo $row['src']; ?>">
-                                                <?php if ($row['pseudo'] === $row['pseudo']) { ?>
-                                                    <div class="pb">
-                                                        <a href="supprimer.php?id=<?php echo $row['id_post'] ?>" class="delete-link">
-                                                            <img src="img/poubelle.png" alt="Icône de poubelle" class="poubelle" />  
-                                                        </a>
-                                                    </div>
-                                                <?php }?>
-                                            </div>
-                                        <?php } // Fermeture de la boucle while
-                                    } // Fermeture de la condition if
+                                    if (isset($_GET['France'])) {
+                                        $stmt = $pdo->prepare("SELECT * FROM poste WHERE tag LIKE :recherche AND tag LIKE '%France%' ORDER BY DATE DESC");
+                                        $stmt->execute(array(':recherche' => '%' . $recherche . '%'));
+                                    }
                                     ?>
-                                </div>
 
+                                    <div class="resultats">
+                                        <?php
+                                        if ($stmt) {
+                                            // Créer la mise en page du résultat
+                                            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                                                <div class="top-post8">
+                                                    <div class="bot-post"> 
+                                                        <p class="pseudo-post"><?php echo $row['pseudo']; ?></p> 
+                                                        <p class="date-post"><?php echo '('.$row['date'].')'; ?></p>
+                                                    </div>
+                                                    <p class="tag-post"><?php echo $row['tag']; ?></p>
+                                                    <p class="message-post"><?php echo $row['message']; ?></p>
+                                                    <img class="imgpost" alt="image de la publication" src="img/<?php echo $row['src']; ?>">
+                                                    <?php if ($row['pseudo'] === $row['pseudo']) { ?>
+                                                        <div class="pb">
+                                                            <a href="supprimer.php?id=<?php echo $row['id_post'] ?>" class="delete-link">
+                                                                <img src="img/poubelle.png" alt="Icône de poubelle" class="poubelle" />  
+                                                            </a>
+                                                        </div>
+                                                    <?php }?>
+                                                </div>
+                                            <?php } // Fermeture de la boucle while
+                                        } // Fermeture de la condition if
+                                        ?>
+                                    </div>
                             
-
-                                
-                                </div>
-                            
-                        
                             <div class="resultats hide" id="resultatsEntrée">
                                 <?php
                                 $recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
@@ -591,13 +583,8 @@ if (!isset($_SESSION['user'])) {
                                     $stmt = $pdo->prepare("SELECT * FROM poste WHERE tag LIKE :recherche AND tag LIKE '%Entree%' ORDER BY DATE DESC");
                                     $stmt->execute(array(':recherche' => '%' . $recherche . '%'));
                                 }
-                                
-                                if(isset($_FILES['file'])) {
-                                    $image= str_replace(' ', '-', $_FILES['file']['name']);
-                                    $upload = "img/".$image;
-                                    move_uploaded_file($_FILES['file']['tmp_name'], $upload);
-                                }
                                 ?>
+
                                 <div class="resultats">
                                     <?php
                                     if ($stmt) {
@@ -623,50 +610,18 @@ if (!isset($_SESSION['user'])) {
                                     } // Fermeture de la condition if
                                     ?>
                                 </div>
+                          
+                              
+                            
+                        
+                            
+                              
                                 </div>
-                            <div class="resultats hide" id="Retour">
-                                <?php
-                                $recherche = isset($_GET['recherche']) ? $_GET['recherche'] : '';
-                                $stmt = null; // Initialize the variable
-
-                                if (isset($_GET[''])) {
-                                    $stmt = $pdo->prepare("SELECT * FROM poste WHERE tag LIKE :recherche AND tag LIKE '%%' ORDER BY DATE DESC");
-                                    $stmt->execute(array(':recherche' => '%' . $recherche . '%'));
-                                }
-                                ?>
-
-                                <div class="resultats">
-                                    <?php
-                                    if ($stmt) {
-                                        // Créer la mise en page du résultat
-                                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-                                            <div class="top-post9">
-                                                <div class="bot-post"> 
-                                                    <p class="pseudo-post"><?php echo $row['pseudo']; ?></p> 
-                                                    <p class="date-post"><?php echo '('.$row['date'].')'; ?></p>
-                                                </div>
-                                                <p class="tag-post"><?php echo $row['tag']; ?></p>
-                                                <p class="message-post"><?php echo $row['message']; ?></p>
-                                                <img class="imgpost" alt="image de la publication" src="img/<?php echo $row['src']; ?>">
-                                                <?php if ($row['pseudo'] === $row['pseudo']) { ?>
-                                                    <div class="pb">
-                                                        <a href="supprimer.php?id=<?php echo $row['id_post'] ?>">
-                                                            <img src="img/poubelle.png" alt="Icône de poubelle" class="poubelle" />  
-                                                        </a>
-                                                    </div>
-                                                <?php }?>
-                                            </div>
-                                        <?php } // Fermeture de la boucle while
-                                    } // Fermeture de la condition if
-                                    ?>
-                                </div>
-                            </div>
                             
 
                             
                         </div>                
-                            </div>
-                        </div>
+                    </div>
                 </div>
             </div>  
             </div>   
